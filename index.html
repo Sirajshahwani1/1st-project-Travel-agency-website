@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>WanderWay – Travel Agency</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar">
+    <div class="logo">
+      <div class="logo-mark">
+        <svg width="36" height="36" viewBox="0 0 36 36">
+          <circle cx="18" cy="18" r="16" fill="none" stroke="#2A7F62" stroke-width="2"/>
+          <path d="M9 20 Q18 8 27 20" stroke="#2A7F62" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+          <circle cx="18" cy="20" r="3.5" fill="#2A7F62"/>
+          <line x1="18" y1="23.5" x2="18" y2="29" stroke="#2A7F62" stroke-width="2" stroke-linecap="round"/>
+        </svg>
+      </div>
+      <div class="logo-words">
+        <span class="l1">Wander</span><span class="l2">Way</span>
+      </div>
+    </div>
+
+    <ul class="nav-links">
+      <li><a class="nav-a active" onclick="show('home')">Home</a></li>
+      <li><a class="nav-a" onclick="show('about')">About</a></li>
+      <li><a class="nav-a" onclick="show('travel')">Travel</a></li>
+      <li><a class="nav-a" onclick="show('contact')">Contact</a></li>
+    </ul>
+
+    <div class="auth-btns">
+      <button class="btn-login" onclick="openModal('login')">Login</button>
+      <button class="btn-reg" onclick="openModal('register')">Register</button>
+    </div>
+  </nav>
+
+  <!-- PAGES -->
+  <div id="home" class="page active">
+
+    <!-- Hero -->
+    <section class="hero">
+      <div class="hero-text">
+        <p class="tag">✦ Explore the World</p>
+        <h1>Travel Made<br/><em>Simple & Beautiful</em></h1>
+        <p class="sub">Affordable packages to the world's most stunning destinations. Let us handle everything.</p>
+        <div class="hero-btns">
+          <button class="btn-main" onclick="show('travel')">View Packages</button>
+          <button class="btn-sec" onclick="show('contact')">Contact Us</button>
+        </div>
+      </div>
+      <div class="hero-img">
+        <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=700&q=80" alt="Travel"/>
+      </div>
+    </section>
+
+    <!-- Quick info -->
+    <section class="info-strip">
+      <div class="info-item">
+        <span class="info-num">10K+</span>
+        <span class="info-label">Happy Travelers</span>
+      </div>
+      <div class="info-item">
+        <span class="info-num">60+</span>
+        <span class="info-label">Destinations</span>
+      </div>
+      <div class="info-item">
+        <span class="info-num">12 Yrs</span>
+        <span class="info-label">Experience</span>
+      </div>
+      <div class="info-item">
+        <span class="info-num">24/7</span>
+        <span class="info-label">Support</span>
+      </div>
+    </section>
+
+  </div>
+
+  <!-- ABOUT PAGE -->
+  <div id="about" class="page">
+    <div class="page-top">
+      <h2>About <em>WanderWay</em></h2>
+      <p>Pakistan's trusted travel partner since 2012</p>
+    </div>
+    <section class="about-body">
+      <div class="about-img">
+        <img src="https://images.unsplash.com/photo-1488085061387-422e29b40080?w=600&q=80" alt="About"/>
+      </div>
+      <div class="about-text">
+        <h3>Who We Are</h3>
+        <p>WanderWay is a Karachi-based travel agency dedicated to crafting seamless, memorable journeys for individuals, couples, and families. Since 2012, we have served thousands of travelers across 60+ destinations worldwide.</p>
+        <p>Our team of expert consultants builds customized itineraries, handles all documentation, and provides 24/7 on-trip support — so you can travel worry-free.</p>
+        <ul class="about-list">
+          <li>✔ Best price guarantee</li>
+          <li>✔ Visa assistance included</li>
+          <li>✔ 5-star hotel partners</li>
+          <li>✔ Flight bookings handled</li>
+        </ul>
+      </div>
+    </section>
+  </div>
+
+  <!-- TRAVEL PAGE -->
+  <div id="travel" class="page">
+    <div class="page-top">
+      <h2>Our <em>Packages</em></h2>
+      <p>Choose your next adventure</p>
+    </div>
+
+    <section class="cards-wrap">
+
+      <div class="card">
+        <div class="card-img">
+          <img src="https://images.unsplash.com/photo-1537996194471-e657df975ab4?w=500&q=80" alt="Bali"/>
+          <span class="tag-badge">Bestseller</span>
+        </div>
+        <div class="card-info">
+          <p class="dest">📍 Bali, Indonesia</p>
+          <h3>Bali Bliss</h3>
+          <p class="desc">7 nights in a private villa with guided temple tours, rice terrace walks, and airport transfers included.</p>
+          <ul class="inc">
+            <li>✈ Return Flights</li>
+            <li>🏨 5-Star Villa (7 nights)</li>
+            <li>🍳 Daily Breakfast</li>
+            <li>🚗 All Transfers</li>
+          </ul>
+          <div class="card-foot">
+            <div class="price">
+              <small>From</small>
+              <strong>PKR 2,45,000</strong>
+              <small>/ person</small>
+            </div>
+            <button class="btn-book" onclick="openModal('book')">Book Now</button>
+          </div>
+          <p class="duration">🕐 7 Nights / 8 Days</p>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-img">
+          <img src="https://images.unsplash.com/photo-1531366936337-7c912a4589a7?w=500&q=80" alt="Switzerland"/>
+          <span class="tag-badge pop">Popular</span>
+        </div>
+        <div class="card-info">
+          <p class="dest">📍 Swiss Alps, Switzerland</p>
+          <h3>Swiss Explorer</h3>
+          <p class="desc">10 nights through Zurich, Interlaken, and Zermatt with scenic train rides and Jungfraujoch visit.</p>
+          <ul class="inc">
+            <li>✈ Return Flights</li>
+            <li>🏨 4-Star Hotels (10 nights)</li>
+            <li>🚂 Swiss Rail Pass</li>
+            <li>👤 Personal Guide</li>
+          </ul>
+          <div class="card-foot">
+            <div class="price">
+              <small>From</small>
+              <strong>PKR 5,80,000</strong>
+              <small>/ person</small>
+            </div>
+            <button class="btn-book" onclick="openModal('book')">Book Now</button>
+          </div>
+          <p class="duration">🕐 10 Nights / 11 Days</p>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-img">
+          <img src="https://images.unsplash.com/photo-1552465011-b4e21bf6e79a?w=500&q=80" alt="Thailand"/>
+          <span class="tag-badge">Family</span>
+        </div>
+        <div class="card-info">
+          <p class="dest">📍 Bangkok & Phuket, Thailand</p>
+          <h3>Thailand Escape</h3>
+          <p class="desc">9 nights — Bangkok temples and street food, then Phuket beaches and island hopping. Perfect for families.</p>
+          <ul class="inc">
+            <li>✈ Return Flights</li>
+            <li>🏨 4-Star Hotels (9 nights)</li>
+            <li>🚢 Island Hopping Tour</li>
+            <li>🍽 Breakfast + Dinner</li>
+          </ul>
+          <div class="card-foot">
+            <div class="price">
+              <small>From</small>
+              <strong>PKR 1,95,000</strong>
+              <small>/ person</small>
+            </div>
+            <button class="btn-book" onclick="openModal('book')">Book Now</button>
+          </div>
+          <p class="duration">🕐 9 Nights / 10 Days</p>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-img">
+          <img src="https://images.unsplash.com/photo-1499678329028-101435549a4e?w=500&q=80" alt="Maldives"/>
+          <span class="tag-badge pop">Luxury</span>
+        </div>
+        <div class="card-info">
+          <p class="dest">📍 Maldives</p>
+          <h3>Maldives Retreat</h3>
+          <p class="desc">5 nights in an overwater bungalow with glass floors, private pool, snorkeling, and couples spa included.</p>
+          <ul class="inc">
+            <li>✈ Flights + Seaplane</li>
+            <li>🌊 Overwater Bungalow</li>
+            <li>🤿 Snorkeling & Diving</li>
+            <li>🍽 Full Board Meals</li>
+          </ul>
+          <div class="card-foot">
+            <div class="price">
+              <small>From</small>
+              <strong>PKR 6,50,000</strong>
+              <small>/ person</small>
+            </div>
+            <button class="btn-book" onclick="openModal('book')">Book Now</button>
+          </div>
+          <p class="duration">🕐 5 Nights / 6 Days</p>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-img">
+          <img src="https://images.unsplash.com/photo-1524492412937-b28074a5d7da?w=500&q=80" alt="India"/>
+          <span class="tag-badge">Cultural</span>
+        </div>
+        <div class="card-info">
+          <p class="dest">📍 Rajasthan, India</p>
+          <h3>Royal Rajasthan</h3>
+          <p class="desc">6 nights exploring Jaipur, Jodhpur, and Udaipur — palaces, deserts, and camel rides through ancient forts.</p>
+          <ul class="inc">
+            <li>✈ Return Flights</li>
+            <li>🏰 Heritage Hotels</li>
+            <li>🐪 Desert Safari</li>
+            <li>🚗 Private Driver</li>
+          </ul>
+          <div class="card-foot">
+            <div class="price">
+              <small>From</small>
+              <strong>PKR 1,20,000</strong>
+              <small>/ person</small>
+            </div>
+            <button class="btn-book" onclick="openModal('book')">Book Now</button>
+          </div>
+          <p class="duration">🕐 6 Nights / 7 Days</p>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-img">
+          <img src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=500&q=80" alt="Nepal"/>
+          <span class="tag-badge">Adventure</span>
+        </div>
+        <div class="card-info">
+          <p class="dest">📍 Kathmandu, Nepal</p>
+          <h3>Himalayan Trek</h3>
+          <p class="desc">12 days trekking through the Khumbu Valley to Everest Base Camp with experienced guides and all permits covered.</p>
+          <ul class="inc">
+            <li>✈ Return Flights</li>
+            <li>🏕 Teahouse Stays</li>
+            <li>🧗 Expert Trek Guide</li>
+            <li>📋 All Permits Included</li>
+          </ul>
+          <div class="card-foot">
+            <div class="price">
+              <small>From</small>
+              <strong>PKR 3,20,000</strong>
+              <small>/ person</small>
+            </div>
+            <button class="btn-book" onclick="openModal('book')">Book Now</button>
+          </div>
+          <p class="duration">🕐 12 Nights / 13 Days</p>
+        </div>
+      </div>
+
+    </section>
+  </div>
+
+  <!-- CONTACT PAGE -->
+  <div id="contact" class="page">
+    <div class="page-top">
+      <h2>Contact <em>Us</em></h2>
+      <p>We're here to help plan your trip</p>
+    </div>
+    <section class="contact-wrap">
+      <div class="contact-details">
+        <h3>Get in Touch</h3>
+        <p>Our team is available 6 days a week to answer your questions and help you book your dream trip.</p>
+        <div class="c-item">📍 <span>2nd Floor, Saddar Centre, Karachi</span></div>
+        <div class="c-item">📞 <span>+92 21 3456 7890</span></div>
+        <div class="c-item">✉️ <span>hello@wanderway.pk</span></div>
+        <div class="c-item">🕐 <span>Mon–Sat: 9 AM – 7 PM</span></div>
+      </div>
+      <div class="contact-form">
+        <div class="form-row">
+          <div class="f-group">
+            <label>Your Name</label>
+            <input type="text" placeholder="Ali Hassan"/>
+          </div>
+          <div class="f-group">
+            <label>Email</label>
+            <input type="email" placeholder="ali@email.com"/>
+          </div>
+        </div>
+        <div class="f-group">
+          <label>Phone</label>
+          <input type="tel" placeholder="+92 300 0000000"/>
+        </div>
+        <div class="f-group">
+          <label>Message</label>
+          <textarea placeholder="Tell us about your trip plans..."></textarea>
+        </div>
+        <button class="btn-main">Send Message</button>
+      </div>
+    </section>
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="f-logo">
+      <svg width="28" height="28" viewBox="0 0 36 36">
+        <circle cx="18" cy="18" r="16" fill="none" stroke="#2A7F62" stroke-width="2"/>
+        <path d="M9 20 Q18 8 27 20" stroke="#2A7F62" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+        <circle cx="18" cy="20" r="3.5" fill="#2A7F62"/>
+        <line x1="18" y1="23.5" x2="18" y2="29" stroke="#2A7F62" stroke-width="2" stroke-linecap="round"/>
+      </svg>
+      <span>WanderWay</span>
+    </div>
+    <p>© 2024 WanderWay Travel Agency, Karachi. All rights reserved.</p>
+  </footer>
+
+  <!-- MODALS -->
+  <div class="overlay" id="overlay" onclick="closeModal()">
+    <div class="modal" onclick="event.stopPropagation()">
+      <button class="modal-x" onclick="closeModal()">✕</button>
+
+      <div id="m-login">
+        <h2>Login</h2>
+        <p>Welcome back to WanderWay</p>
+        <div class="f-group"><label>Email</label><input type="email" placeholder="your@email.com"/></div>
+        <div class="f-group"><label>Password</label><input type="password" placeholder="••••••••"/></div>
+        <button class="btn-main w100">Login</button>
+        <p class="switch">No account? <a onclick="openModal('register')">Register</a></p>
+      </div>
+
+      <div id="m-register" style="display:none">
+        <h2>Register</h2>
+        <p>Create your WanderWay account</p>
+        <div class="f-group"><label>Full Name</label><input type="text" placeholder="Your name"/></div>
+        <div class="f-group"><label>Email</label><input type="email" placeholder="your@email.com"/></div>
+        <div class="f-group"><label>Phone</label><input type="tel" placeholder="+92 300 0000000"/></div>
+        <div class="f-group"><label>Password</label><input type="password" placeholder="••••••••"/></div>
+        <button class="btn-main w100">Create Account</button>
+        <p class="switch">Have an account? <a onclick="openModal('login')">Login</a></p>
+      </div>
+
+      <div id="m-book" style="display:none">
+        <h2>Book Package</h2>
+        <p>Fill in your details to confirm</p>
+        <div class="f-group"><label>Full Name</label><input type="text" placeholder="Your name"/></div>
+        <div class="f-group"><label>Email</label><input type="email" placeholder="your@email.com"/></div>
+        <div class="f-group"><label>Phone</label><input type="tel" placeholder="+92 300 0000000"/></div>
+        <div class="f-group"><label>Travel Date</label><input type="date"/></div>
+        <div class="f-group"><label>Travelers</label><input type="number" min="1" placeholder="2"/></div>
+        <button class="btn-main w100">Confirm Booking</button>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function show(page) {
+      document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
+      document.querySelectorAll('.nav-a').forEach(a => a.classList.remove('active'));
+      document.getElementById(page).classList.add('active');
+      const links = document.querySelectorAll('.nav-a');
+      const map = { home: 0, about: 1, travel: 2, contact: 3 };
+      links[map[page]].classList.add('active');
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    function openModal(type) {
+      ['login','register','book'].forEach(t => {
+        document.getElementById('m-' + t).style.display = 'none';
+      });
+      document.getElementById('m-' + type).style.display = 'block';
+      document.getElementById('overlay').classList.add('open');
+    }
+
+    function closeModal() {
+      document.getElementById('overlay').classList.remove('open');
+    }
+  </script>
+</body>
+</html>
